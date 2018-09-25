@@ -1,0 +1,67 @@
+<link href="Diffihelman.css" rel="stylesheet" />
+<div class="row">
+        <div class="col-md-12" ng-controller="DiffiHelmanController">
+            <h1>Алгоритм Диффи-Хелмана</h1>
+            
+            <!--<p>Сообщение:</p><input type="text" ng-model="diffihelman.message" value="" />-->
+            <div class="row">
+            <div class="col-md-4">
+                <div id="Peterformulae">
+                    <p>Питер загадывает число:</p><input type="text" ng-model="diffihelman.Peter" value="" class="Peter"/>
+                    <p>Питер передаёт число Джону:</p><input type="text" ng-model="diffihelman.PeterRes" class="Peter"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="informative">
+                    <p>Введите простое число</p>
+                    <p>Ключ1:</p><input type="text" ng-model="diffihelman.publickeyone" class="informative"/>  
+                    <p>Ключ2:</p><input type="text" ng-model="diffihelman.publickeytwo" class="informative"/>
+                    <p>Статус:</p><input type="text" ng-model="diffihelman.ErrorMessage" class="informative"/>
+                    <p>Ключ системы:</p><p ng-bind="diffihelman.systemkey" class="informative"></p>
+                    </p><input type="button" ng-click="diffihelman.processing()" value="Запустить шарманку!" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div id="Johnformulae">
+                    <p>Джон загадывает число:</p><input type="text" ng-model="diffihelman.John" class="John"/>
+                    <p>Джон передаёт число Питеру:</p><input type="text" ng-model="diffihelman.JohnRes" class="John"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="formulae">
+                    <p id="Peterformulae">{{diffihelman.JohnRes}}<sup><small>{{diffihelman.Peter}}</small></sup>&equiv;{{diffihelman.systemkey}}(mod {{diffihelman.publickeytwo}})</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="formulae">
+                    <p id="Johnformulae">{{diffihelman.PeterRes}}<sup><small>{{diffihelman.John}}</small></sup>&equiv;{{diffihelman.systemkey}}(mod {{diffihelman.publickeytwo}})</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+        <p><button class="btn btn-default">История &raquo;</button></p>
+            <div class="hist">
+              <h2>Описание и История<h2>
+              <p id="history">
+                Передача ключа по открытым каналам была большой проблемой криптографии XX века. Но эту проблему удалось решить после появления алгоритма Диффи-Хеллмана. Данный алгоритм позволил дать ответ на главный вопрос:
+                «Как при обмене зашифрованными посланиями уйти от необходимости передачи секретного кода расшифровки, который, как правило, не меньше самого послания?» Открытое распространение ключей Диффи-Хеллмана позволяет паре пользователей системы выработать общий секретный ключ, не обмениваясь секретными данными.
+                Протокол Ди́ффи-Хе́ллмана — криптографический протокол, позволяющий двум и более сторонам получить общий секретный ключ, используя незащищенный от прослушивания канал связи. Полученный ключ используется для шифрования дальнейшего обмена с помощью алгоритмов симметричного шифрования.
+              </p>
+              </div>
+        </div>
+    </div>
+   <script type="text/javascript">
+       $('.btn').click(function(){
+                            if ($(".hist").is(":hidden")) {
+                       $(".hist").slideDown("slow");
+                     } else {
+                       $(".hist").hide("slow");
+                      }
+                   //alert("!!");
+             })
+   </script>

@@ -1,0 +1,59 @@
+<div>
+   
+           <link href="Cesar.css" rel="stylesheet" />
+    <div class="row">
+        <div class="col-md-12">
+        <div id="forpart"></div>
+        <div>
+        <div id="forresult" style="display: inline-block; overflow:hidden;">
+            
+        </div>
+        <input type="button" id="button" ng-click="scroll()"  value=">" >
+        <div>
+           <!-- <h2>{{chipher.name}}</h2>
+           <p>{{chipher.history}}</p>
+           <br>
+           <p>{{chipher.mechanism}}</p>-->
+           <div>
+           <form><input type="text" id="text" ng-model='message'></input>
+           <input type="submit" id="translate" ng-click="translate()" value="Translate"></input>
+           </form>
+               <input type="text" id="resultat"></input>
+               <input type="button" ng-click="show()" value="knock">
+           </div>
+           
+
+            
+            <style>
+            #forpart, #forresult{
+                position: relative;
+                height: 5%;
+                width: 90%;
+                text-align:center;
+                border:1px solid black;
+                margin-top: 5%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .item, #button, .itemscroll{
+                position: relative;
+                left:0;
+                padding-top: 1%;
+                height: 40px;
+                width: 3.84615384615%;
+                text-align: center;
+                vertical-align: middle;
+                border:1px solid black;
+                display: inline-block;
+            }
+            </style>
+
+        </div>
+        
+        <div class="col-md-12">
+            <div class="history">
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+body{
+background-color: #3CB371;
+}
+.hist, .alhoritm{
+border: 3px solid whitesmoke;
+color: whitesmoke;
+display:none;
+margin-top:5%;
+}
+.hist >h2{
+	text-align: center;
+}
+
+.alhoritm >h2{
+	text-align: center;
+}
+
+#history, #alhoritm{
+	font-size: 70%;
+}

@@ -1,0 +1,56 @@
+<div id="analitical">
+	<div class="row">
+		<div class="col-xs-6">
+			<label>Выбрать размер матрицы yXy</label>
+			<form class="pageitem">
+			<input type="text" id="dimension"></input><br/>
+			<input type="button" class="btn btn-primary" ng-click="buildmatrix()" value="Построить матрицу"></input>
+			</form>
+			<label class="pageitem">2)Заполнить матрицу</label><br/>
+			<label class="pageitem">3)Ввести сообщение</label>
+			<form class="pageitem">
+				<textarea id="message" cols="50" rows="5" ng-model="message"></textarea>
+				<input type="button" class="btn btn-success" ng-click="codeAnalitical()" value="Шифровать"></input>
+			</form>
+			<p>{{messageCode}}</p>
+			<div class="row preResultBlock">
+				<div class="col-xs-6" id="preResult1"></div>
+				<div class="col-xs-6" id="preResult2"></div>
+			</div>
+			<p>И так далее...</p>
+			<h2>Результат: {{result}}</h2>
+			<p>{{replie}}</p>
+		</div>
+		<div class="col-xs-6">
+			<div id="matrix"></div>
+		</div>
+	</div>
+</div>
+
+<style>
+	body {
+		background-color: #FFC173;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+	#analitical, .col-xs-6, #partial, .container, .body-content{
+		position: relative;
+		height: 100%;
+	}
+	#matrix > input{
+		position: relative;
+		width: 5%;
+	}
+	.pageitem{
+		margin: 3%;
+	}
+	.preResultBlock{
+		position: relative;
+	}
+	#preResult1 > #matrix > input{
+		position: relative;
+		width: 10%;
+	}
+
+</style>

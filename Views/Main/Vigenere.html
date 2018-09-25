@@ -1,0 +1,79 @@
+
+
+           <link href="Vigenere.css" rel="stylesheet" />
+    <div class="row">
+        <div class="col-md-12">
+            
+
+            <p ng-bind="vigenere.translate()"></p>
+                        <form name="userForm">
+                          
+                          
+                        <p>Введите сообщение</p><input type="text" name="userName"
+                         ng-model="chip.message"
+                         ng-model-options="{ getterSetter: true }" />
+                         <p ng-bind="{{user.message}}"></p>
+                         <p>Введите ключ</p><input type="text" name="key" ng-model="chip.key"
+                         ng-model-options="{ getterSetter: true }"/>
+                          </form>
+                            <pre>Зашифрованное сообщение:<p ng-bind="chip.func()"></p></pre>
+                            
+                        
+                              <p ng-bind-html="expl.func()"></p>
+
+        </div>
+        <div class="col-md-12">
+        <p><button class="btn btn-default btn-history">История &raquo;</button></p>
+              <div class="hist">
+              <h2>Описание и История<h2>
+              <p id="history">
+                Блез де Виженер родился во Франции в 1523 г. В 1549 г. он был послан французским правительством с дипломатической миссией в Рим, где заинтересовался криптографией и шифрованием сообщений. В 1585 г. он написал основополагающий трактат о шифрах, Traicte des Chiffres, где описывалась система шифрования, которой он дал свое имя. Эта система шифрования оставалась неподдающейся взлому на протяжении почти трех столетий, пока британцу Чарльзу Бэббиджу не удалось взломать ее в 1854 г. Любопытно, что этот факт стал известен лишь в XX в., когда группа ученых разбирала вычисления и личные заметки Бэббиджа.
+              </p>
+              </div>
+              <p><button class="btn btn-default btn-alhoritm">Алгоритм &raquo;</button></p>
+              <div class="alhoritm">
+              <h2>Алгоритм<h2>
+              <p id="alhoritm"><p>
+                Пускай, мы хотим зашифровать сообщение BUY MILK TODAY ("Купи сегодня молоко") с помощью ключевого слова JACKSON:</p>
+                <img src="Img/Vigeneretwo.jpg">
+                <p> Ключом к квадрату Виженера является правило для каждой буквы, которое указывает, на сколько строк вниз надо спуститься, чтобы найти зашифрованное значение, соответствующее этой букве. Простейший ключ состоит из движения вниз на одну строку при переходе от одной буквы исходного сообщения к другой.
+                 Ключевое слово дает первые буквы каждой строки (см. стр. 47), и строки продолжаются остатком алфавита (как они представлены в полном квадрате). Затем ключевое слово, повторенное нужное количество раз, пишется под буквами сообщения, которое необходимо было зашифровать. Буква ключевого слова под каждым символом сообщения подсказывала криптографу строку в матрице, из которой нужно было взять зашифрованное значение этой буквы.
+                 </p>
+                 <img src="Img/Vigenereone.jpg">
+              </p>
+              </div>
+
+       
+        </div>
+    </div>
+
+<style>
+.j{
+  background-color: green;
+}
+</style>
+
+           
+           <!-- <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>-->
+            <script type="text/javascript">
+             
+
+             $('.btn-history').click(function(){
+                            if ($(".hist").is(":hidden")) {
+                       $(".hist").slideDown("slow");
+                     } else {
+                       $(".hist").hide("slow");
+                      }
+                   //alert("!!");
+             })
+             $('.btn-alhoritm').click(function(){
+                            if ($(".alhoritm").is(":hidden")) {
+                       $(".alhoritm").slideDown("slow");
+                     } else {
+                       $(".alhoritm").hide("slow");
+                      }
+                   //alert("!!");
+             })
+
+            </script>

@@ -1,0 +1,131 @@
+
+           <link href="Adfgvx.css" rel="stylesheet" />
+    <div class="row">
+        <div class="col-md-12">
+        	<h1>Шифр ADFGVX</h1>
+            <table>
+            <tr> <th></th> <th>A</th> <th>D</th> <th>F</th> <th>G</th> <th>V</th> <th>X</th> </tr>
+
+            <tr>
+            <th>A</th>
+            <td><input type="text" ng-model="table.tab.p0" ng-model-options="{ getterSetter: true }"/></td>
+            <td><input type="text" ng-model="table.tab.p1" ng-model-options="{ getterSetter: true }"/></td>
+            <td><input type="text" ng-model="table.tab.p2" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p3" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p4" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p5" ng-model-options="{ getterSetter: true }"/></td>
+            </tr>
+
+			<tr>
+			<th>D</th>
+			<td><input type="text" ng-model="table.tab.p6" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p7" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p8" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p9" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p10" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p11" ng-model-options="{ getterSetter: true }"/></td>
+			</tr>
+
+			<tr>
+			<th>F</th>
+			<td><input type="text" ng-model="table.tab.p12" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p13" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p14" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p15" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p16" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p17" ng-model-options="{ getterSetter: true }"/></td>
+			</tr>
+
+			<tr>
+			<th>G</th>
+			<td><input type="text" ng-model="table.tab.p18" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p19" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p20" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p21" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p22" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p23" ng-model-options="{ getterSetter: true }"/></td>
+			</tr>
+
+			<tr>
+			<th>V</th>
+			<td><input type="text" ng-model="table.tab.p24" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p25" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p26" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p27" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p28" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p29" ng-model-options="{ getterSetter: true }"/></td>
+			</tr>
+
+			<tr>
+			<th>X</th>
+			<td><input type="text" ng-model="table.tab.p30" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p31" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p32" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p33" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p34" ng-model-options="{ getterSetter: true }"/></td>
+			<td><input type="text" ng-model="table.tab.p35" ng-model-options="{ getterSetter: true }"/></td>
+			</tr>
+			</table>
+
+
+
+			<p>Сообщение:</p><input type="text" ng-model="table.message" value="" />
+			<p>Ключ:</p><input type="text" ng-model="table.key" value="" />  
+			<input type="button" ng-click="table.rundom()" value="Составить ключ подстановки" />   
+			<input type="button" ng-click="table.processing()" value="Шифровать"/>  
+			<input type="text" ng-model="table.chipher">
+        </div>
+        <div class="col-md-12">
+        <p><button class="btn btn-default btn-history">История &raquo;</button></p>
+			<div class="hist">
+              <h2>Описание и История<h2>
+              <p id="history">
+                В июне 1918 г. германские войска готовились напасть на столицу Франции. Для союзников было крайне важно перехватить вражеские сообщения, чтобы выяснить, где именно произойдет вторжение. Немецкие сообщения, предназначенные для фронта, были зашифрованы шифром ADFGVX, который немецкие военные считали неуязвимым.
+				Наш интерес к этому шифру связан с тем, что он сочетает в себе алгоритмы подстановки и перестановочного шифрования. Это один из самых изощренных методов классической криптографии. Немцы начали использовать его в марте 1918 г., и как только французы узнали о его существовании, они отчаянно принялись за его взлом.
+				К счастью для них, в центральном шифровальном бюро работал талантливый криптоаналитик Жорж Панвэн. Он посвятил себя этой задаче, работая круглые сутки.
+				Ночью 2 июня 1918 г. Панвэну удалось расшифровать первое сообщение, зловещим содержанием которого был приказ фронту: "Ускорьте продвижение боевой техники. Даже в дневное время, лишь бы незаметно". В начале шифровки было указано, что она отправлена из местечка, расположенного между Мондидье и Компьень, в 80 километрах к северу от Парижа. Результат Панвэна позволил французам сорвать атаку и остановить продвижение немцев.
+              </p>
+              </div>
+              <p><button class="btn btn-default btn-alhoritm">Алгоритм &raquo;</button></p>
+              <div class="alhoritm">
+              <h2>Алгоритм<h2>
+              <p id="alhoritm"><p>
+                	Как уже упоминалось, шифр ADFGVX состоит из двух частей: шифра подстановки и шифра перестановки. 
+                Первый шаг - подстановка - состоит в следующем: у нас имеется таблица размером 7 х 7, в которой первая строка и первый столбец содержат буквы ADFGVX (см. стр. 58). Остальные поля таблицы случайным образом заполняются 36 символами: 26 букв алфавита и цифры от 0 до 9. Расположение символов представляет собой ключ к шифру, и получателю, очевидно, нужна эта информация, чтобы понять содержание сообщения.
+					Мы будем использовать следующую таблицу:</p>
+					<img src="Img/Adfgvxone.jpg">
+				<p>Шифр сообщения состоит в замене каждого символа его координатами, выраженными группой букв ADFGVX. Первой координатой будет буква, соответствующая строке, а второй - соответствующая столбцу. Например, если мы хотим зашифровать цифру 4, мы должны написать DV. Сообщение Target is Paris ("Цель - Париж") будет зашифровано следующим образом:</p>
+				<img src="Img/Adfgvxtwo.jpg">
+				<p>До сих пор мы использовали лишь простую подстановку, и частотного анализа было бы достаточно, чтобы расшифровать сообщение.
+			    Однако этот шифр содержит второй шаг - перестановку. Она зависит от ключевого слова, о котором договорились отправитель и получатель. Этот шаг осуществляется следующим образом. Сначала мы построим таблицу с таким числом столбцов, сколько букв в ключевом слове, и заполним поля таблицы зашифрованным текстом.
+			    Буквы  ключевого слова пишут в верхнем ряду новой таблицы. В этом примере ключевое слово будет BETA. Построим таблицу, в которой первая строка состоит из букв ключевого слова и следующие строки содержат буквы, полученные после кодирования сообщения на этапе подстановки. Любые пустые ячейки заполняются цифрой ноль, которая, как видно из первой таблицы, имеет код AG.
+				Чтобы применить второй шаг к нашему сообщению "Цель - Париж", напомним сначала, что после подстановки оно выглядело так:</p>
+				<img src="Img/Adfgvxthree.jpg">
+				<p>Применяя перестановочный шифр, изменим порядок столбцов, чтобы буквы ключевого слова были расположены в алфавитном порядке. Это даст нам следующую таблицу.</p>
+				<img src="Img/Adfgvxfore.jpg">
+				<p>Зашифрованное послание получается, если брать буквы этой таблицы по столбцам. В нашем примере это будет:
+				AAXFAXGGFGVAFVXWXDVFFDGVFVA</p>
+              </p>
+              </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    	 $('.btn-history').click(function(){
+                            if ($(".hist").is(":hidden")) {
+                       $(".hist").slideDown("slow");
+                     } else {
+                       $(".hist").hide("slow");
+                      }
+                   //alert("!!");
+             })
+    	  $('.btn-alhoritm').click(function(){
+                            if ($(".alhoritm").is(":hidden")) {
+                       $(".alhoritm").slideDown("slow");
+                     } else {
+                       $(".alhoritm").hide("slow");
+                      }
+                   //alert("!!");
+             })
+    </script>
